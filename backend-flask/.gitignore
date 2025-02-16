@@ -1,0 +1,46 @@
+# Environment
+.env
+*.env
+venv/
+.envrc
+*.DS_Store
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+instance/
+
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Virtual Environment
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Deployment
+*.bak
+*.swp
+*.swo
+*.seed
+*.db
+*.sqlite
+
+# Docker
+*.dockerfile
+.dockerignore
+
+# Node.js (kalau gabung dengan Next.js)
+node_modules/
+.next/
+package-lock.json
+
+# Flask-Specific
+*.flaskenv
