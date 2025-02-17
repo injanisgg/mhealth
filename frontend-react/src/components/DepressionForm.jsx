@@ -97,7 +97,7 @@ function DepressionForm() {
   );
 
   return (
-    <div className="max-w-xl mx-20 justify-center p-4">
+    <div className="max-w-xl mx-20 sm:mx-14 justify-center p-4">
       <h1 className="text-2xl font-bold mb-6 text-center text-black font-main">Depression Risk Assessment</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <InputField label="Age" name="Age" type="number" />
