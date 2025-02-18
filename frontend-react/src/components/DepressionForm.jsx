@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFaceFrown, faFaceLaughBeam } from '@fortawesome/free-solid-svg-icons';
 
 function DepressionForm() {
   const [formData, setFormData] = useState({
@@ -67,18 +69,26 @@ function DepressionForm() {
     setLoading(false);
   };
 
+  // Auto scroll ke bawah ketika result muncul
+  useEffect(() => {
+    if (result) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+  }, [result]);
+  
+
   const InputField = ({ label, name, type, options }) => (
     <div className="mb-4">
       <label className="block text-sm font-medium text-black ml-5 mb-1">{label}</label>
       {type === "select" ? (
         <select
-          className="w-full py-3 px-4  border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
           name={name}
           value={formData[name]}
           onChange={handleChange}
           required
         >
-          <option value="">Pilih {label}</option>
+          <option value="" className="text-sm">Pilih {label}</option>
           {options.map((option) => (
             <option key={option} value={option}>{option}</option>
           ))}
@@ -97,7 +107,7 @@ function DepressionForm() {
   );
 
   return (
-    <div className="max-w-xl mx-20 sm:mx-14 flex flex-col justify-center p-4">
+    <div className="max-w-xl mx-20 sm:mx-10 flex flex-col justify-center p-4">
       <p className="text-black text-center font-main font-bold">Prediksi</p>
       <h1 className="text-2xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
       <form onSubmit={handleSubmit} className="space-y-4 font-main">
@@ -123,11 +133,15 @@ function DepressionForm() {
       {result && (
         <div className={`mt-6 p-4 border rounded-xl shadow-md 
         ${result.status === "error" ? "bg-red-50 border-red-500" 
-          : result.prediction === 1 ? "bg-button" 
+          : result.prediction === 1 ? "bg-button border-black" 
           : 'bg-gradient-to-r from-light-green to-thick-green'}` }>
           {result.status === "success" ? (
-            <div className="flex flex-col justify-around text-center items-center text-white">
-              <p className='text-base font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
+            <div className="flex flex-col justify-around text-center items-center text-white gap-5">
+              <FontAwesomeIcon 
+                icon={result.prediction === 1 ? faFaceFrown : faFaceLaughBeam} 
+                className="text-yellow-400 text-6xl"
+              />
+              <p className='text-sm font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
               <p className="text-xl font-bold font-main">{result.prediction === 1 ? 'Tinggi/Berpotensi memiliki depresi' : 'Rendah/Tidak berpotensi memiliki depresi'}</p>
             </div>
           ) : (
