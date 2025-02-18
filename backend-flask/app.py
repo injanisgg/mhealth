@@ -3,6 +3,33 @@ from flask_cors import CORS
 import joblib
 import pandas as pd
 import logging
+from sklearn.preprocessing import LabelEncoder
+
+# Definisikan CustomLabelEncoder di sini agar pickle bisa memuat encoder
+class CustomLabelEncoder(LabelEncoder):
+    def __init__(self, unknown_value=None):
+        super().__init__()
+        self.unknown_value = unknown_value
+        
+    def fit(self, y):
+        if self.unknown_value is not None and self.unknown_value not in y:
+            y = np.append(y, self.unknown_value)
+        return super().fit(y)
+    
+    def transform(self, y):
+        try:
+            return super().transform(y)
+        except ValueError:
+            if self.unknown_value is not None:
+                mask = np.array([item not in self.classes_ for item in y])
+                result = np.zeros(len(y), dtype=int)
+                for i, val in enumerate(y):
+                    if val in self.classes_:
+                        result[i] = super().transform([val])[0]
+                    else:
+                        result[i] = super().transform([self.unknown_value])[0]
+                return result
+            raise
 
 app = Flask(__name__)
 CORS(app)

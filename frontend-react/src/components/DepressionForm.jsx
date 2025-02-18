@@ -69,16 +69,16 @@ function DepressionForm() {
 
   const InputField = ({ label, name, type, options }) => (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-black mb-1">{label}</label>
+      <label className="block text-sm font-medium text-black ml-5 mb-1">{label}</label>
       {type === "select" ? (
         <select
-          className="w-full p-3 border rounded-lg bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full py-3 px-4  border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
           name={name}
           value={formData[name]}
           onChange={handleChange}
           required
         >
-          <option value="">Select {label}</option>
+          <option value="">Pilih {label}</option>
           {options.map((option) => (
             <option key={option} value={option}>{option}</option>
           ))}
@@ -86,7 +86,7 @@ function DepressionForm() {
       ) : (
         <input
           type={type}
-          className="w-full p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 text-black"
+          className="w-full py-3 px-4 border border-black rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 text-black"
           name={name}
           value={formData[name]}
           onChange={handleChange}
@@ -97,33 +97,39 @@ function DepressionForm() {
   );
 
   return (
-    <div className="max-w-xl mx-20 sm:mx-14 justify-center p-4">
-      <h1 className="text-2xl font-bold mb-6 text-center text-black font-main">Depression Risk Assessment</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <InputField label="Age" name="Age" type="number" />
-        <InputField label="CGPA" name="Cgpa" type="number" />
-        <InputField label="Academic Pressure (0-5)" name="Academic_Pressure" type="number" />
-        <InputField label="Study Satisfaction (0-5)" name="Study_Satisfaction" type="number" />
-        <InputField label="Sleep Duration" name="Sleep_Duration" type="select" options={sleepDurationOptions} />
-        <InputField label="Dietary Habits" name="Dietary_Habits" type="select" options={dietaryHabitsOptions} />
-        <InputField label="Degree" name="Degree" type="select" options={degreeOptions} />
-        <InputField label="Work/Study Hours per Day (0-12)" name="WrkStdy_Hours" type="number" />
-        <InputField label="Financial Stress (1-5)" name="Financial_Stress" type="number" />
-        <InputField label="Suicidal Thoughts" name="Suicidal_Thoughts" type="select" options={yesNoOptions} />
-        <InputField label="Family Mental History" name="Family_Mental_History" type="select" options={yesNoOptions} />
+    <div className="max-w-xl mx-20 sm:mx-14 flex flex-col justify-center p-4">
+      <p className="text-black text-center font-main font-bold">Prediksi</p>
+      <h1 className="text-2xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
+      <form onSubmit={handleSubmit} className="space-y-4 font-main">
+        <InputField label="Umur" name="Age" type="number" />
+        <InputField label="IPK" name="Cgpa" type="number" />
+        <InputField label="Tekanan Akademik (1-5)" name="Academic_Pressure" type="number" />
+        <InputField label="Kepuasan Akademik (1-5)" name="Study_Satisfaction" type="number" />
+        <InputField label="Durasi Tidur" name="Sleep_Duration" type="select" options={sleepDurationOptions} />
+        <InputField label="Kebiasaan Makan" name="Dietary_Habits" type="select" options={dietaryHabitsOptions} />
+        <InputField label="Gelar" name="Degree" type="select" options={degreeOptions} />
+        <InputField label="Durasi Jam Bekerja/Belajar Perhari (0-12)" name="WrkStdy_Hours" type="number" />
+        <InputField label="Stress Finansial (1-5)" name="Financial_Stress" type="number" />
+        <InputField label="Pemikiran untuk Bunuh Diri" name="Suicidal_Thoughts" type="select" options={yesNoOptions} />
+        <InputField label="Riwayat Kesehatan Mental dari Keluarga" name="Family_Mental_History" type="select" options={yesNoOptions} />
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white px-6 py-4 rounded-lg hover:bg-blue-600 disabled:bg-blue-300 text-lg font-medium shadow-md"
+          className="w-full bg-button text-white px-6 py-4 rounded-xl hover:bg-orange-600 disabled:bg-orange-300 text-lg font-medium shadow-md"
           disabled={loading}
         >
-          {loading ? "Processing..." : "Assess Depression Risk"}
+          {loading ? "Memprediksi..." : "Prediksi Resiko Depresi"}
         </button>
       </form>
       {result && (
-        <div className={`mt-6 p-4 border rounded-lg shadow-md ${result.status === "error" ? "bg-red-50 border-red-500" : "bg-green-50 border-green-500"}` }>
-          <h2 className="text-xl font-bold mb-3">Assessment Result</h2>
+        <div className={`mt-6 p-4 border rounded-xl shadow-md 
+        ${result.status === "error" ? "bg-red-50 border-red-500" 
+          : result.prediction === 1 ? "bg-button" 
+          : 'bg-gradient-to-r from-light-green to-thick-green'}` }>
           {result.status === "success" ? (
-            <p className="text-lg">Risk Level: {result.prediction === 1 ? "High Risk of Depression" : "Low Risk of Depression"}</p>
+            <div className="flex flex-col justify-around text-center items-center text-white">
+              <p className='text-base font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
+              <p className="text-xl font-bold font-main">{result.prediction === 1 ? 'Tinggi/Berpotensi memiliki depresi' : 'Rendah/Tidak berpotensi memiliki depresi'}</p>
+            </div>
           ) : (
             <p className="text-red-500">{result.message}</p>
           )}

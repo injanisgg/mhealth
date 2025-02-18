@@ -18,6 +18,12 @@ export default {
       fontFamily: {
         'main': 'Manrope',
         'secondary': 'Poppins',
+      },
+      colors: {
+        'light-green': '#5EB47C',
+        'thick-green' : '#007D6E',
+        'based': '#FCF8F4',
+        'button': '#EC744A'
       }
     },
   },

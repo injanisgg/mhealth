@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import ResponsiveBar from '../components/ResponsiveBar';
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <ResponsiveBar />
 
       <main>
         <Outlet />
