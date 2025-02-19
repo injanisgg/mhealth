@@ -6,6 +6,7 @@ import Three from '../img/Three-abt.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Footer from '../components/Footer';
 
 const playData = [
   { id: 1, title: 'Umur', answer: (
@@ -230,10 +231,7 @@ function About() {
         </div>
       </div>
 
-
-
-
-
+    <Footer/>
     </div>
   )
 }
