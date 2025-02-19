@@ -22,7 +22,9 @@ function Home() {
                 <span className='text-button'>Kesehatan</span>
               </h1>
               <p className='font-secondary text-sm sm:text-xs w-80 sm:w-52'>“Perawatan diri adalah bagaimana kamu mengambil kembali kekuatan kamu” - Lalah Delia.</p>
-              <button className='w-60 sm:w-32 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>Mulai Prediksi</button>
+              <button className='w-60 sm:w-32 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>
+                <a href="/predict">Mulai Prediksi</a>
+              </button>
             </div>
             <img src={headerHome} alt="Woman with girl" className='w-72 sm:w-60 z-10 sm:mb-10' />
           </div>
@@ -66,7 +68,9 @@ function Home() {
             <p className='font-secondary text-sm sm:text-xs w-80 sm:w-52 text-justify'>
               Ketahui informasi mengenai sistem ini. Dari mulai tujuan pembuatan sistem sampai dengan data yang dibutuhkan untuk melakukan prediksi serta cara menggunakannya.              
             </p>
-            <button className='w-60 sm:w-32 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>Tentang Sistem</button>
+            <button className='w-60 sm:w-32 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>
+              <a href="/about">Tentang Sistem</a>
+            </button>
           </div>
         </div>
       </div>
@@ -97,7 +101,9 @@ function Home() {
               <h3 className='text-base font-bold'>98.38%</h3>
             </div>
           </div>
-          <button className='w-60 sm:w-32 mt-0 sm:mt-4 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>Mulai Peediksi</button>
+          <button className='w-60 sm:w-32 mt-0 sm:mt-4 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>
+            <a href="/predict">Mulai Peediksi</a>
+          </button>
         </div>
       </div>
 
@@ -111,7 +117,9 @@ function Home() {
               Lihat detail metode dan hasil dari model sistem prediksi ini
             </h1>
             <p className='font-secondary text-sm sm:text-xs w-80 sm:w-52'>Jelajahi bagaimana model bekerja dan temukan insight dari hasil prediksinya.</p>
-            <button className='w-60 sm:w-32 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>Lihat Model</button>
+            <button className='w-60 sm:w-32 py-1 text-sm sm:text-xs text-white font-main bg-button rounded-full'>
+              <a href="/model">Lihat Model</a>
+            </button>
           </div>
         </div>
         <img src={predictHome} alt="Woman with girl" className='w-72 sm:w-56' />
