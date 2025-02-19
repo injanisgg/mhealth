@@ -47,7 +47,7 @@ function ResponsiveBar() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`hidden z-10 lg:flex xl:flex justify-center items-center bg-transparent fixed top-0 left-0 right-0 w-full p-6 transition-all duration-300
+        className={`hidden z-20 lg:flex xl:flex justify-center items-center bg-transparent fixed top-0 left-0 right-0 w-full p-6 transition-all duration-300
           ${isScroll || !isHome ? 'bg-gradient-to-r from-light-green to-thick-green text-white' : ' bg-based text-black'}`}
       >
         <div className="text-xl font-main font-bold absolute left-20">Myndcure</div>
