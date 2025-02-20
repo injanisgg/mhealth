@@ -60,7 +60,7 @@ function Home() {
       <div className="flex items-center justify-center">
         <img src={aboutHome} alt="Woman with girl" className='w-72 sm:w-56' />
         <div className="flex flex-col gap-5 sm:gap-0 mx-5 sm:mx-1">
-          <h1 className='text-base sm:text-[8px] font-bold font-main lg:hidden text-black'>Tentang Sistem</h1>
+          <h1 className='text-base sm:text-[8px] font-bold font-main text-black'>Tentang Sistem</h1>
           <div className="flex flex-col gap-5 sm:gap-2">
             <h1 className='flex flex-col font-main text-xl sm:text-lg font-bold z-0'>
               Ketahuilah lebih dalam tentang sistem prediksi depresi ini
@@ -79,7 +79,7 @@ function Home() {
     {/* section for page predict */}
       <div className="text-white bg-gradient-to-r from-light-green to-thick-green w-full py-5 sm:py-6">
         <div className="flex flex-col gap-5 sm:gap-0 mx-5 sm:mx-1 justify-center items-center">
-          <p className='text-base sm:text-[8px] font-bold font-main lg:hidden'>Tentang Sistem</p>
+          <p className='text-base sm:text-[8px] font-bold font-main'>Tentang Sistem</p>
           <h1 className='font-main text-xl sm:text-lg font-semibold text-center mb-5 sm:mb-2'>
           Coba sistem prediksi depresi ini untuk memahami kondisi psikologis Anda lebih awal 
           </h1>
@@ -111,7 +111,7 @@ function Home() {
     <div className='w-full bg-transparent px-5 py-8 sm:px-4 sm:py-7 lg:mt-16'>
       <div className="flex items-center justify-center">
         <div className="flex flex-col gap-5 sm:gap-0 mx-5 sm:mx-1">
-          <h1 className='text-base sm:text-[8px] font-bold font-main lg:hidden text-black'>Model</h1>
+          <h1 className='text-base sm:text-[8px] font-bold font-main text-black'>Model</h1>
           <div className="flex flex-col gap-5 sm:gap-2">
             <h1 className='flex flex-col font-main text-xl sm:text-lg font-bold'>
               Lihat detail metode dan hasil dari model sistem prediksi ini

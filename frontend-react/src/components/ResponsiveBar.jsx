@@ -7,7 +7,7 @@ import {
   faSquare as solidHome,
   faUser as solidInfo,
   faCircleQuestion as solidPredict,
-  faFile as solidModel
+  faFolder as solidModel
  } from '@fortawesome/free-solid-svg-icons';
 import { 
   faSquare as thinHome,

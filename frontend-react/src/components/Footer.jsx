@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full bg-gradient-to-r from-light-green to-thick-green p-10 sm:p-5'>
+    <div className='w-full mt-20 sm:mt-12 bg-gradient-to-r from-light-green to-thick-green p-10 sm:p-5'>
       <div className="flex justify-evenly text-white">
         <div className="flex flex-col gap-3">
             <h1 className='text-lg font-main font-bold'>Myndcure</h1>
