@@ -67,27 +67,27 @@ function Model() {
             <div className="flex flex-col p-5 sm:p-2 justify-around text-center items-center text-white bg-gradient-to-r from-light-green to-thick-green rounded-3xl">
               <img src={Flask} alt="logo" className='w-32 sm:w-12'/>
               <p className="text-lg sm:text-base font-bold font-main">Flask</p>
-              <p className='text-sm sm:text-[8px] text-center w-32 font-secondary'>Flask digunakan sebagai backend dari sistem ini yang melakukan prediksi dan mengirimkannya pada frontend</p>
+              <p className='text-sm sm:text-[8px] text-center w-60 sm:w-36 leading-tight font-secondary'>Flask digunakan sebagai backend dari sistem ini yang melakukan prediksi dan mengirimkannya pada frontend</p>
             </div>
-            <div className="flex flex-col p-5 sm:p-2 justify-around text-center items-center text-white bg-transparent rounded-3xl">
+            <div className="flex flex-col p-5 sm:p-2 justify`-around text-center items-center text-white bg-transparent rounded-3xl">
               <img src={ReactVite} alt="logo" className='w-32 sm:w-16'/>
               <p className="text-lg sm:text-base font-bold font-main text-black">React Vite</p>
-              <p className='text-sm sm:text-[8px] text-center w-32 font-secondary text-black'>React vite digunakan sebagai frontend dengan membuat UI yang menarik dan menerima API dari backend</p>
+              <p className='text-sm sm:text-[8px] text-center w-60 sm:w-36 leading-tight font-secondary text-black'>React vite digunakan sebagai frontend dengan membuat UI yang menarik dan menerima API dari backend</p>
             </div>
             <div className="flex flex-col p-5 sm:p-2 justify-around text-center items-center text-white bg-transparent rounded-3xl">
               <img src={FontAwesome} alt="logo" className='w-32 sm:w-9'/>
               <p className="text-lg sm:text-base font-bold font-main text-black">Fontawesome</p>
-              <p className='text-sm sm:text-[8px] text-center w-32 font-secondary text-black'>Fontawesome digunakan untuk menunjang frontend dengan mengambil icon-icon yang sesuai untuk frontend</p>
+              <p className='text-sm sm:text-[8px] text-center w-60 sm:w-36 leading-tight font-secondary text-black'>Fontawesome digunakan untuk menunjang frontend dengan mengambil icon-icon yang sesuai untuk frontend</p>
             </div>
             <div className="flex flex-col p-5 sm:p-2 justify-around text-center items-center text-white bg-gradient-to-r from-light-green to-thick-green rounded-3xl">
               <img src={Tailwind} alt="logo" className='w-32 sm:w-12'/>
               <p className="text-lg sm:text-base font-bold font-main">Tailwindcss</p>
-              <p className='text-sm sm:text-[8px] text-center w-32 font-secondary'>Tailwindcss digunakan untuk membuat UI yang menarik untuk frontend</p>
+              <p className='text-sm sm:text-[8px] text-center w-60 sm:w-36 leading-tight font-secondary'>Tailwindcss digunakan untuk membuat UI yang menarik untuk frontend</p>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     <Footer />
     </div>
   )

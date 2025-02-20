@@ -133,7 +133,7 @@ function DepressionForm() {
       {result && (
         <div className={`mt-6 p-4 border rounded-xl shadow-md 
         ${result.status === "error" ? "bg-red-50 border-red-500" 
-          : result.prediction === 1 ? "bg-button border-black" 
+          : result.prediction === 1 ? "bg-red-600 border-black" 
           : 'bg-gradient-to-r from-light-green to-thick-green'}` }>
           {result.status === "success" ? (
             <div className="flex flex-col justify-around text-center items-center text-white gap-5">

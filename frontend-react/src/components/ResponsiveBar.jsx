@@ -79,7 +79,7 @@ function ResponsiveBar() {
             to={tab.path}
             onClick={() => setActiveTab(tab.id)}
             className={`flex flex-col items-center text-gray-600
-              ${location.pathname === tab.path ? "text-thick-green" : ''}`}
+              ${location.pathname === tab.path ? "text-thick-green font-bold" : ''}`}
           >
             <FontAwesomeIcon
               icon={location.pathname === tab.path ? tab.solidIcon : tab.thinIcon}
