@@ -14,7 +14,7 @@ function Home() {
         <div className='w-full bg-transparent px-5 py-8 sm:px-4 sm:py-7 lg:mt-16'>
           <div className="flex items-center justify-around">
             <div className="flex flex-col gap-5 sm:gap-2 md:gap-5">
-              <h1 className='text-xl sm:text-xl md:text-2xl font-main font-bold lg:hidden text-black'>Myndcure</h1>
+              <h1 className='text-xl sm:text-xl md:text-2xl font-main font-bold lg:hidden text-black'>Mental Health Detection</h1>
               <h1 className='flex flex-col font-main text-xl sm:text-xl md:text-3xl font-bold z-0'>
                 <span className='text-black'>Kesehatan Mental</span>
                 <span className='text-black'>adalah <span className='text-button'>Fondasi</span> </span>

@@ -79,16 +79,16 @@ function DepressionForm() {
 
   const InputField = ({ label, name, type, options }) => (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-black ml-5 mb-1">{label}</label>
+      <label className="block text-sm sm:text-sm md:text-base font-medium text-black ml-5 mb-1">{label}</label>
       {type === "select" ? (
         <select
-          className="w-full py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full text-sm sm:text-sm md:text-base py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
           name={name}
           value={formData[name]}
           onChange={handleChange}
           required
         >
-          <option value="" className="text-sm">Pilih {label}</option>
+          <option value="">Pilih {label}</option>
           {options.map((option) => (
             <option key={option} value={option}>{option}</option>
           ))}
@@ -107,48 +107,50 @@ function DepressionForm() {
   );
 
   return (
-    <div className="max-w-xl mx-20 sm:mx-10 flex flex-col justify-center p-4">
-      <p className="text-black text-center font-main font-bold">Prediksi</p>
-      <h1 className="text-2xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
-      <form onSubmit={handleSubmit} className="space-y-4 font-main">
-        <InputField label="Umur" name="Age" type="number" />
-        <InputField label="IPK" name="Cgpa" type="number" />
-        <InputField label="Tekanan Akademik (1-5)" name="Academic_Pressure" type="number" />
-        <InputField label="Kepuasan Akademik (1-5)" name="Study_Satisfaction" type="number" />
-        <InputField label="Durasi Tidur" name="Sleep_Duration" type="select" options={sleepDurationOptions} />
-        <InputField label="Kebiasaan Makan" name="Dietary_Habits" type="select" options={dietaryHabitsOptions} />
-        <InputField label="Gelar" name="Degree" type="select" options={degreeOptions} />
-        <InputField label="Durasi Jam Bekerja/Belajar Perhari (0-12)" name="WrkStdy_Hours" type="number" />
-        <InputField label="Stress Finansial (1-5)" name="Financial_Stress" type="number" />
-        <InputField label="Pemikiran untuk Bunuh Diri" name="Suicidal_Thoughts" type="select" options={yesNoOptions} />
-        <InputField label="Riwayat Kesehatan Mental dari Keluarga" name="Family_Mental_History" type="select" options={yesNoOptions} />
-        <button
-          type="submit"
-          className="w-full bg-button text-white px-6 py-4 rounded-xl hover:bg-orange-600 disabled:bg-orange-300 text-lg font-medium shadow-md"
-          disabled={loading}
-        >
-          {loading ? "Memprediksi..." : "Prediksi Resiko Depresi"}
-        </button>
-      </form>
-      {result && (
-        <div className={`mt-6 p-4 border rounded-xl shadow-md 
-        ${result.status === "error" ? "bg-red-50 border-red-500" 
-          : result.prediction === 1 ? "bg-red-600 border-black" 
-          : 'bg-gradient-to-r from-light-green to-thick-green'}` }>
-          {result.status === "success" ? (
-            <div className="flex flex-col justify-around text-center items-center text-white gap-5">
-              <FontAwesomeIcon 
-                icon={result.prediction === 1 ? faFaceFrown : faFaceLaughBeam} 
-                className="text-yellow-400 text-6xl"
-              />
-              <p className='text-sm font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
-              <p className="text-xl font-bold font-main">{result.prediction === 1 ? 'Tinggi/Berpotensi memiliki depresi' : 'Rendah/Tidak berpotensi memiliki depresi'}</p>
+    <div className="mx-20 sm:mx-10 md:mx-14 mt-10 sm:mt-8 md:mt-10">
+      <div className="flex flex-col sm:flex-col md:flex-col justify-center items-center">
+        <p className="text-black text-center font-main font-bold text-base sm:text-[8px] md:text-xs ">Prediksi</p>
+        <h1 className="text-2xl sm:text-lg md:text-xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
+        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max">
+          <InputField label="Umur" name="Age" type="number" />
+          <InputField label="IPK" name="Cgpa" type="number" />
+          <InputField label="Tekanan Akademik (1-5)" name="Academic_Pressure" type="number" />
+          <InputField label="Kepuasan Akademik (1-5)" name="Study_Satisfaction" type="number" />
+          <InputField label="Durasi Tidur" name="Sleep_Duration" type="select" options={sleepDurationOptions} />
+          <InputField label="Kebiasaan Makan" name="Dietary_Habits" type="select" options={dietaryHabitsOptions} />
+          <InputField label="Gelar" name="Degree" type="select" options={degreeOptions} />
+          <InputField label="Durasi Jam Bekerja/Belajar Perhari (0-12)" name="WrkStdy_Hours" type="number" />
+          <InputField label="Stress Finansial (1-5)" name="Financial_Stress" type="number" />
+          <InputField label="Pemikiran untuk Bunuh Diri" name="Suicidal_Thoughts" type="select" options={yesNoOptions} />
+          <InputField label="Riwayat Kesehatan Mental dari Keluarga" name="Family_Mental_History" type="select" options={yesNoOptions} />
+          <button
+            type="submit"
+            className="w-full bg-button text-white px-6 py-4 rounded-xl hover:bg-orange-600 disabled:bg-orange-300 text-lg font-medium shadow-md"
+            disabled={loading}
+          >
+            {loading ? "Memprediksi..." : "Prediksi Resiko Depresi"}
+          </button>
+        </form>
+      </div>
+        {result && (
+            <div className={`mt-6 p-4 sm:p-4 md:p-8 border rounded-xl shadow-md 
+            ${result.status === "error" ? "bg-red-50 border-red-500" 
+              : result.prediction === 1 ? "bg-red-600 border-black" 
+              : 'bg-gradient-to-r from-light-green to-thick-green'}` }>
+              {result.status === "success" ? (
+                <div className="flex flex-col justify-around text-center items-center text-white gap-5">
+                  <FontAwesomeIcon 
+                    icon={result.prediction === 1 ? faFaceFrown : faFaceLaughBeam} 
+                    className="text-yellow-400 text-6xl"
+                  />
+                  <p className='text-sm sm:text-xs md:text-sm font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
+                  <p className="text-xl sm:text-lg md:text-xl font-bold font-main">{result.prediction === 1 ? 'Tinggi/Berpotensi memiliki depresi' : 'Rendah/Tidak berpotensi memiliki depresi'}</p>
+                </div>
+              ) : (
+                <p className="text-red-500">{result.message}</p>
+              )}
             </div>
-          ) : (
-            <p className="text-red-500">{result.message}</p>
-          )}
-        </div>
-      )}
+        )}
     </div>
   );
 }

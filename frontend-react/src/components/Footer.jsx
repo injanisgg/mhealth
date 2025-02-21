@@ -6,7 +6,7 @@ function Footer() {
       <div className="flex flex-col items-center gap-5">
         <div className="flex gap-10 sm:gap-8 md:gap-12 text-white">
           <div className="flex flex-col gap-3">
-              <h1 className='text-lg font-main font-bold'>Myndcure</h1>
+              <h1 className='text-lg font-main font-bold'>Mental Health Detection</h1>
               <div className='flex flex-col gap-5 sm:gap-0 md:gap-2 text-xs sm:text-[8px] md:text-sm font-normal sm:font-thin md:font-extralight'>
                   <span>Temukan depresimu lebih cepat</span>
                   <span>Temukan Pertolongan lebih cepat</span>
@@ -32,7 +32,7 @@ function Footer() {
           </div>
         </div>
         <div className="border-t-2 sm:border-t md:border-t-2 border-white text-white text-xs sm:text-[8px] md:text-xs w-full flex justify-center">
-          <p>Copyright 2025; xxx all right reserved</p>
+          <p className='pt-4'>© Copyright 2025 Mental health detection all right reserved</p>
         </div>
       </div>
     </div>
