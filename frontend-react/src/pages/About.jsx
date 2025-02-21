@@ -208,7 +208,7 @@ function About() {
             </div>
             <div className="flex flex-col gap-5 sm:gap-2 md:gap-5">
               {playData.map((item) => (
-                <div key={item.id} className="flex flex-col gap-2">
+                <div key={item.id} className="flex flex-col gap-2 transition-all ease-in-out">
                   <div className='flex items-center gap-5 sm:gap-2 md:gap-5'>
                   <motion.div
                     animate={{ rotate: activeId === item.id ? 90 : 0 }}
