@@ -1,35 +1,42 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import joblib
+import numpy as np
 import pandas as pd
 import logging
 from sklearn.preprocessing import LabelEncoder
 
-# Definisikan CustomLabelEncoder di sini agar pickle bisa memuat encoder
+# Definisikan CustomLabelEncoder agar bisa menangani nilai yang tidak dikenal
 class CustomLabelEncoder(LabelEncoder):
     def __init__(self, unknown_value=None):
         super().__init__()
         self.unknown_value = unknown_value
-        
+
     def fit(self, y):
+        # Jika unknown_value belum ada di kelas, tambahkan
         if self.unknown_value is not None and self.unknown_value not in y:
             y = np.append(y, self.unknown_value)
         return super().fit(y)
-    
+
     def transform(self, y):
-        try:
-            return super().transform(y)
-        except ValueError:
-            if self.unknown_value is not None:
-                mask = np.array([item not in self.classes_ for item in y])
-                result = np.zeros(len(y), dtype=int)
-                for i, val in enumerate(y):
-                    if val in self.classes_:
-                        result[i] = super().transform([val])[0]
-                    else:
-                        result[i] = super().transform([self.unknown_value])[0]
-                return result
-            raise
+        if not hasattr(self, 'classes_'):
+            raise ValueError("Encoder belum di-fit. Panggil .fit() sebelum .transform().")
+
+        # Pastikan semua nilai yang tidak dikenali dipetakan ke unknown_value
+        unknown_index = super().transform([self.unknown_value])[0] if self.unknown_value in self.classes_ else -1
+        transformed = []
+        
+        for val in y:
+            if val in self.classes_:
+                transformed.append(super().transform([val])[0])
+            else:
+                transformed.append(unknown_index)
+        
+        return np.array(transformed)
+
+    def fit_transform(self, y):
+        return self.fit(y).transform(y)
+
 
 app = Flask(__name__)
 CORS(app)
