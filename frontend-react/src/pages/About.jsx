@@ -10,19 +10,19 @@ import Footer from '../components/Footer';
 
 const playData = [
   { id: 1, title: 'Umur', answer: (
-  <p className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+  <p className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
     Umur adalah waktu hidup seseorang sejak lahir, dihitung dalam satuan tahun. <br />
     Anda bisa memasukan umur anda pada input box.
   </p>
   )},
   { id: 2, title: 'Indeks Prestasi Kumulatif (IPK)', answer: (
-    <p className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <p className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       IPK adalah alat ukur keberhasilan mahasiswa dalam menjalani perkuliahan dari awal hingga akhir masa studinya.<br />
       Anda bisa memasukan IPK ke dalam input box.
     </p>
   )},
   { id: 3, title: 'Tekanan Akademik', answer:(
-    <div className='flex flex-col translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='flex flex-col translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>
         Tekanan akademik adalah stres atau tuntutan yang dialami oleh mahasiswa akibat beban kerja, ekspektasi dari lingkungan, dan persaingan dalam dunia pendidikan. Tekanan ini dapat berasal dari tugas, ujian, atau harapan orang tua dan guru.
       </p>
@@ -39,7 +39,7 @@ const playData = [
     </div>
   )},
   { id: 4, title:'Kepuasan Belajar', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>
         Kepuasan akademik adalah perasaan positif yang dialami siswa atau mahasiswa terkait pengalaman mereka dalam lingkungan pendidikan. Ini mencakup persepsi tentang kualitas pengajaran, relevansi materi, interaksi dengan pengajar dan teman sebaya, serta pencapaian akademik yang diraih. Kepuasan akademik berpengaruh pada motivasi belajar dan keterlibatan siswa.
       </p>
@@ -56,7 +56,7 @@ const playData = [
     </div>
   )},
   { id: 5, title:'Durasi Tidur', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Durasi tidur merujuk pada jumlah waktu yang dihabiskan seseorang untuk tidur dalam suatu periode, biasanya dalam satu malam. Durasi tidur yang cukup penting untuk kesehatan fisik dan mental, serta berpengaruh pada kinerja akademik.</p>
       <br />
       <p>Skala durasi tidur</p>
@@ -70,7 +70,7 @@ const playData = [
     </div>
   )},
   { id: 6, title:'Kebiasaan makan', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Kebiasaan makan merujuk pada pola dan pilihan makanan yang dilakukan seseorang secara teratur. Kebiasaan ini dapat mempengaruhi kesehatan fisik, mental, dan kinerja akademik.</p>
       <br />
       <p>Skala kebiasaan makan</p>
@@ -83,12 +83,12 @@ const playData = [
     </div>
   )},
   { id: 7, title:'Durasi Belajar atau Bekerja', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Durasi belajar atau bekerja adalah waktu yang anda habiskan untuk belajar atau bekerja. Anda bisa memasukan lama durasi anda belajar atau bekerja dari skala 0 sampai 12 jam.</p>
     </div>
   )},
   { id: 8, title:'Gelar', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Gelar adalah akreditasi akademik yang diberikan kepada individu setelah menyelesaikan program pendidikan tertentu.</p>
       <br />
       <p>Pilihan nama gelar</p>
@@ -129,7 +129,7 @@ const playData = [
     </div>
   )},
   { id: 9, title:'Stress Finansial', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Stres finansial adalah tekanan atau kecemasan yang muncul akibat masalah keuangan, seperti utang, pengeluaran yang melebihi pendapatan, atau ketidakstabilan ekonomi. Hal ini dapat berdampak pada kesehatan mental dan fisik seseorang.</p>
       <br />
       <p>Skala stress finansial (0-5)</p>
@@ -144,7 +144,7 @@ const playData = [
     </div>
   )},
   { id: 10, title:'Pemikiran untuk Bunuh Diri', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Pemikiran untuk bunuh diri adalah keinginan atau dorongan untuk mengakhiri hidup, baik dalam bentuk pikiran sementara maupun rencana yang lebih serius. Ini sering dipicu oleh stres berat, depresi, atau tekanan emosional yang mendalam.</p>
       <br />
       <p>Pilihan jawaban</p>
@@ -155,7 +155,7 @@ const playData = [
     </div>
   )},
   { id: 11, title:'Riwayat Penyakit Mental dari Keluarga', answer:(
-    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10'>
+    <div className='translate-x-6 sm:translate-x-6 md:translate-x-10 lg:translate-x-14 xl:translate-x-[4.4rem]'>
       <p>Riwayat penyakit mental dari keluarga adalah adanya anggota keluarga yang pernah atau sedang mengalami gangguan mental, yang dapat meningkatkan risiko seseorang mengalami kondisi serupa akibat faktor genetik dan lingkungan.</p>
       <br />
       <p>Pilihan jawaban</p>
@@ -175,21 +175,21 @@ function About() {
   }
   
   return (
-    <div className='pb-0 sm:pb-16'>
+    <div className='pb-0 sm:pb-16 md:pb-16 lg:pb-0 xl:pb-0'>
       <Banner title={'Tentang Sistem'} desc={'Sistem deteksi depresi ini dirancang untuk membantu mengidentifikasi tanda-tanda awal gangguan mental melalui analisis data dan kecerdasan buatan. Tujuannya bukan untuk menggantikan diagnosis profesional, tetapi sebagai alat bantu yang dapat meningkatkan kesadaran dan mendorong individu untuk mencari bantuan yang tepat lebih cepat.'}/>
 
       {/* section for page about */}
-      <div className="mx-5 my-8 sm:mx-4 sm:my-7 lg:mt-16">
+      <div className="mx-5 my-8 sm:mx-4 md:mx-6 lg:mx-10 xl:mx-14 sm:my-7 md:my-9 lg:my-11 xl:my-13 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
           <div className="flex items-center justify-center">
-            <img src={One} alt="Woman with girl" className='w-72 sm:w-56 md:w-64' />
-            <div className="flex flex-col gap-5 sm:gap-0 md:gap-1 mx-5 sm:mx-1 md:mx-5">
-              <h1 className='text-sm sm:text-[8px] md:text-sm font-bold font-main lg:hidden text-black'>Tentang Sistem</h1>
-              <div className="flex flex-col gap-5 sm:gap-2 md:gap-4">
-                <h1 className='flex flex-col font-main text-xl sm:text-lg md:text-xl font-bold z-0'>
+            <img src={One} alt="Woman with girl" className='w-72 sm:w-56 md:w-64 lg:w-80 xl:w-96' />
+            <div className="flex flex-col gap-5 sm:gap-0 md:gap-1 lg:gap-3 mx-5 sm:mx-1 md:mx-5 lg:mx-10 xl:mx-16">
+              <h1 className='text-sm sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-bold font-main lg:hidden text-black'>Tentang Sistem</h1>
+              <div className="flex flex-col gap-5 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
+                <h1 className='flex flex-col font-main text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold z-0'>
                   Temukan Depresi Lebih Cepat agar Penanganan Lebih Cepat
                 </h1>
-                <p className='font-secondary text-sm sm:text-xs md:text-sm text-justify'>
+                <p className='font-secondary text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg text-justify'>
                   Sistem ini membantu untuk melakukan prediksi terkait depresimu dengan cepat. Akurasi prediksi dari sistem ini mencapai 98.11% sehingga bisa cukup tepat untuk memprediksi.
                 </p>
               </div>
@@ -199,31 +199,31 @@ function About() {
       </div>
 
       {/* Data dan Tutorial */}
-      <div className="mx-5 my-8 sm:mx-4 sm:my-7 lg:mt-16">
+      <div className="mx-5 my-8 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-16 sm:my-7 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
-          <div className="flex flex-col gap-10 sm:gap-5 md:gap-7">
+          <div className="flex flex-col gap-10 sm:gap-5 md:gap-7 lg:gap-9 xl:gap-11">
             <div className="flex flex-col justify-center items-center">
-              <h3 className='text-sm sm:text-[8px] md:text-sm font-bold font-main text-black'>Data dan Tutorial</h3>
-              <h1 className='font-main text-xl sm:text-lg md:text-xl font-bold'>Data yang Dibutuhkan dan Cara Menggunakan</h1>
+              <h3 className='text-sm sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Data dan Tutorial</h3>
+              <h1 className='font-main text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Data yang Dibutuhkan dan Cara Menggunakan</h1>
             </div>
-            <div className="flex flex-col gap-5 sm:gap-2 md:gap-5">
+            <div className="flex flex-col gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
               {playData.map((item) => (
                 <div key={item.id} className="flex flex-col gap-2 transition-all ease-in-out">
-                  <div className='flex items-center gap-5 sm:gap-2 md:gap-5'>
+                  <div className='flex items-center gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12'>
                   <motion.div
                     animate={{ rotate: activeId === item.id ? 90 : 0 }}
                     transition={{ duration: 1 }}
                   >
-                    <FontAwesomeIcon icon={faPlay} onClick={() => handleClick(item.id)} className='text-3xl sm:text-xl md:text-2xl text-black cursor-pointer'/>
+                    <FontAwesomeIcon icon={faPlay} onClick={() => handleClick(item.id)} className='text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-black cursor-pointer'/>
                   </motion.div>
-                    <h2 className='font-main text-sm sm:text-xs md:text-sm font-semibold'>
+                    <h2 className='font-main text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold'>
                       {item.title}
                     </h2>
                   </div>
                   <AnimatePresence>
                     {activeId === item.id && (
                       <motion.p 
-                        className="text-sm text-justify sm:text-[8px] md:text-sm font-secondary text-gray-700 mr-20 sm:mr-14"
+                        className="text-sm text-justify sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-secondary text-gray-700 mr-20 sm:mr-14"
                         initial={{ opacity: 0, y: -10 }} // Mulai dari opacity 0 dan sedikit ke atas
                         animate={{ opacity: 1, y: 0 }} // Muncul perlahan
                         exit={{ opacity: 0, y: -10 }} // Menghilang perlahan
@@ -238,8 +238,8 @@ function About() {
             </div>
           </div>
           <div className='flex justify-center mt-5'>
-            <img src={Two} alt="Woman with girl" className='w-72 sm:w-32 md:w-44' />
-            <img src={Three} alt="Woman with girl" className='w-72 sm:w-40 md:w-52' />
+            <img src={Two} alt="Woman with girl" className='w-72 sm:w-32 md:w-44 lg:w-52 xl:w-60' />
+            <img src={Three} alt="Woman with girl" className='w-72 sm:w-40 md:w-52 lg:w-72 xl:w-80' />
           </div>
         </div>
       </div>
