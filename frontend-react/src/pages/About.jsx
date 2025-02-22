@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Banner from '../components/Banner';
 import One from '../img/one-abt.png';
 import Two from '../img/two-abt.png';
-import Three from '../img/Three-abt.png';
+import Three from '../img/three-abt.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
