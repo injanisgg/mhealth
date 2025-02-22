@@ -199,47 +199,71 @@ function About() {
       </div>
 
       {/* Data dan Tutorial */}
-      <div className="mx-5 my-8 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-16 sm:my-7 lg:mt-16 xl:mt-20">
+      <div className="mx-5 my-8 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-20 sm:my-7 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
           <div className="flex flex-col gap-10 sm:gap-5 md:gap-7 lg:gap-9 xl:gap-11">
             <div className="flex flex-col justify-center items-center">
               <h3 className='text-sm sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Data dan Tutorial</h3>
               <h1 className='font-main text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Data yang Dibutuhkan dan Cara Menggunakan</h1>
             </div>
-            <div className="flex flex-col gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
-              {playData.map((item) => (
-                <div key={item.id} className="flex flex-col gap-2 transition-all ease-in-out">
-                  <div className='flex items-center gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12'>
-                  <motion.div
-                    animate={{ rotate: activeId === item.id ? 90 : 0 }}
-                    transition={{ duration: 1 }}
-                  >
-                    <FontAwesomeIcon icon={faPlay} onClick={() => handleClick(item.id)} className='text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-black cursor-pointer'/>
-                  </motion.div>
-                    <h2 className='font-main text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold'>
-                      {item.title}
-                    </h2>
-                  </div>
-                  <AnimatePresence>
-                    {activeId === item.id && (
-                      <motion.p 
-                        className="text-sm text-justify sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-secondary text-gray-700 mr-20 sm:mr-14"
-                        initial={{ opacity: 0, y: -10 }} // Mulai dari opacity 0 dan sedikit ke atas
-                        animate={{ opacity: 1, y: 0 }} // Muncul perlahan
-                        exit={{ opacity: 0, y: -10 }} // Menghilang perlahan
-                        transition={{ duration: 0.5 }} // Durasi efek
-                      >
-                        {item.answer}
-                      </motion.p>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
+            <div className="flex justify-center mx-0 md:mx-40 md:justify-start sm:justify-start gap-52 lg:gap-52 xl:gap-52 sm:gap-0 md:gap-0">
+              <div className="flex flex-col gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
+                <AnimatePresence>
+                  {playData.map((item) => (
+                    <motion.div 
+                      key={item.id} 
+                      className="flex flex-col gap-2"
+                      layout // Menambahkan animasi layout agar elemen lain turun dengan smooth
+                      transition={{ type: "spring", stiffness: 100, damping: 15 }} // Smooth animasi
+                    >
+                      <div className="flex items-center gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
+                        <motion.div
+                          animate={{ rotate: activeId === item.id ? 90 : 0 }}
+                          transition={{ duration: 1 }}
+                        >
+                          <FontAwesomeIcon
+                            icon={faPlay}
+                            onClick={() => handleClick(item.id)}
+                            className="text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-black cursor-pointer"
+                          />
+                        </motion.div>
+                        <h2 className="font-main text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold">
+                          {item.title}
+                        </h2>
+                      </div>
+                      <AnimatePresence>
+                        {activeId === item.id && (
+                          <motion.p
+                            className="text-sm text-justify sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-secondary text-gray-700 mr-20 sm:mr-14 w-[35rem]"
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            layout // Pastikan teks juga ikut animasi smooth
+                            transition={{ duration: 0.5 }}
+                          >
+                            {item.answer}
+                          </motion.p>
+                        )}
+                      </AnimatePresence>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </div>
+
+              {/* Bungkus gambar dalam motion.div agar bisa digeser */}
+              <motion.div
+                className="flex flex-col justify-between"
+                animate={{ x: activeId ? 80 : 0 }} // Geser ke kanan saat ada yang aktif
+                transition={{ type: "spring", stiffness: 100, damping: 10, duration: 0.5 }} // Animasi smooth
+              >
+                <img src={Two} alt="Woman with girl" className="w-72 lg:w-80 xl:w-96 hidden lg:block" />
+                <img src={Three} alt="Woman with girl" className="w-72 lg:w-80 xl:w-96 hidden lg:block" />
+              </motion.div>
+          </div>
           </div>
           <div className='flex justify-center mt-5'>
-            <img src={Two} alt="Woman with girl" className='w-72 sm:w-32 md:w-44 lg:w-52 xl:w-60' />
-            <img src={Three} alt="Woman with girl" className='w-72 sm:w-40 md:w-52 lg:w-72 xl:w-80' />
+            <img src={Two} alt="Woman with girl" className='w-72 sm:w-32 md:w-44 lg:hidden xl:hidden' />
+            <img src={Three} alt="Woman with girl" className='w-72 sm:w-40 md:w-52 lg:hidden xl:hidden' />
           </div>
         </div>
       </div>

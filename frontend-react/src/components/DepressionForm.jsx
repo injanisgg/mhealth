@@ -77,12 +77,12 @@ function DepressionForm() {
   }, [result]);
   
 
-  const InputField = ({ label, name, type, options }) => (
-    <div className="mb-4">
-      <label className="block text-sm sm:text-sm md:text-base font-medium text-black ml-5 mb-1">{label}</label>
+  const InputField = ({ label, name, type, options, className }) => (
+    <div className={`mb-4 lg:mb-0 ${className}`}>
+      <label className="block text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-black ml-5 mb-1 lg:mb-0">{label}</label>
       {type === "select" ? (
         <select
-          className="w-full text-sm sm:text-sm md:text-base py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
           name={name}
           value={formData[name]}
           onChange={handleChange}
@@ -107,11 +107,11 @@ function DepressionForm() {
   );
 
   return (
-    <div className="mx-20 sm:mx-10 md:mx-14 mt-10 sm:mt-8 md:mt-10">
-      <div className="flex flex-col sm:flex-col md:flex-col justify-center items-center">
-        <p className="text-black text-center font-main font-bold text-base sm:text-[8px] md:text-xs ">Prediksi</p>
-        <h1 className="text-2xl sm:text-lg md:text-xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
-        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max">
+    <div className="mx-20 sm:mx-10 md:mx-14 lg:mx-20 xl:mx-20 mt-10 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14">
+      <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-col justify-center items-center">
+        <p className="text-black text-center font-main font-bold text-base sm:text-[8px] md:text-xs lg:text-sm xl:text-lg">Prediksi</p>
+        <h1 className="text-2xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
+        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max sm:w-max md:w-max lg:w-fit gap-4 items-end lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-5">
           <InputField label="Umur" name="Age" type="number" />
           <InputField label="IPK" name="Cgpa" type="number" />
           <InputField label="Tekanan Akademik (1-5)" name="Academic_Pressure" type="number" />
@@ -121,11 +121,11 @@ function DepressionForm() {
           <InputField label="Gelar" name="Degree" type="select" options={degreeOptions} />
           <InputField label="Durasi Jam Bekerja/Belajar Perhari (0-12)" name="WrkStdy_Hours" type="number" />
           <InputField label="Stress Finansial (1-5)" name="Financial_Stress" type="number" />
-          <InputField label="Pemikiran untuk Bunuh Diri" name="Suicidal_Thoughts" type="select" options={yesNoOptions} />
-          <InputField label="Riwayat Kesehatan Mental dari Keluarga" name="Family_Mental_History" type="select" options={yesNoOptions} />
+          <InputField label="Pemikiran untuk Bunuh Diri" name="Suicidal_Thoughts" type="select" options={yesNoOptions} className='lg:col-span-3'/>
+          <InputField label="Riwayat Kesehatan Mental dari Keluarga" name="Family_Mental_History" type="select" options={yesNoOptions} className='lg:col-span-3'/>
           <button
             type="submit"
-            className="w-full bg-button text-white px-6 py-4 rounded-xl hover:bg-orange-600 disabled:bg-orange-300 text-lg font-medium shadow-md"
+            className="w-full bg-button text-white px-6 py-4 rounded-xl hover:bg-orange-600 disabled:bg-orange-300 text-lg font-medium shadow-md  lg:col-span-3"
             disabled={loading}
           >
             {loading ? "Memprediksi..." : "Prediksi Resiko Depresi"}
@@ -133,7 +133,7 @@ function DepressionForm() {
         </form>
       </div>
         {result && (
-            <div className={`mt-6 p-4 sm:p-4 md:p-8 border rounded-xl shadow-md 
+            <div className={`mt-6 p-4 sm:p-4 md:p-8 lg:p-10 xl:p-12 border rounded-xl shadow-md 
             ${result.status === "error" ? "bg-red-50 border-red-500" 
               : result.prediction === 1 ? "bg-red-600 border-black" 
               : 'bg-gradient-to-r from-light-green to-thick-green'}` }>
@@ -143,8 +143,8 @@ function DepressionForm() {
                     icon={result.prediction === 1 ? faFaceFrown : faFaceLaughBeam} 
                     className="text-yellow-400 text-6xl"
                   />
-                  <p className='text-sm sm:text-xs md:text-sm font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
-                  <p className="text-xl sm:text-lg md:text-xl font-bold font-main">{result.prediction === 1 ? 'Tinggi/Berpotensi memiliki depresi' : 'Rendah/Tidak berpotensi memiliki depresi'}</p>
+                  <p className='text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-secondary'>{result.prediction === 1 ? "Mohon maaf hasil prediksi resiko depresi anda adalah" : "Selamat! Hasil prediksi resiko depresi anda adalah"}</p>
+                  <p className="text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold font-main">{result.prediction === 1 ? 'Tinggi/Berpotensi memiliki depresi' : 'Rendah/Tidak berpotensi memiliki depresi'}</p>
                 </div>
               ) : (
                 <p className="text-red-500">{result.message}</p>
