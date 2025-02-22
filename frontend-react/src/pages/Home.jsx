@@ -32,7 +32,7 @@ function Home() {
       </div>
 
     {/* section info the importance */}
-    <div className="mx-20 sm:mx-5 md:mx-10 lg:mx-16 xl:mx-20">
+    <div className="mx-5 sm:mx-5 md:mx-10 lg:mx-16 xl:mx-20">
       <div className="flex flex-col justify-center items-center gap-5 relative">
         <div className='flex justify-center text-center font-bold font-main text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>
           <h1>Mengapa Kesehatan Mental itu Penting dan <br /> Berpengaruh pada Kualitas Hidup?</h1>

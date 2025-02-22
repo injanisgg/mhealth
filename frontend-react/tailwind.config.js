@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'sm': '480px',   // hp
+        'xs': '375px',  //mobile first
+        'sm': '480px',   // hp 
         'md': '768px',   // tablet
         'lg': '1024px',  // laptop
         'xl': '1280px',  // laptop
