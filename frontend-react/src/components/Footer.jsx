@@ -14,20 +14,20 @@ function Footer() {
           </div>
           <div className="flex flex-col gap-3">
               <h1 className='text-base font-main font-medium'>Halaman</h1>
-              <div className='flex flex-col gap-5 sm:gap-0 md:gap-2 lg:gap-4 xl:gap-6 text-xs sm:text-[8px] md:text-xs lg:text-sm xl:text-base font-normal sm:font-thin md:font-extralight lg:font-normal lg:hover:underline lg:hover:font-bold font-secondary'>
-                  <a href='/'>Beranda</a>
-                  <a href='/about'>Tentang Sistem</a>
-                  <a href='/predict'>Prediksi</a>
-                  <a href='/model'>Model</a>
+              <div className='flex flex-col gap-5 sm:gap-0 md:gap-2 lg:gap-4 xl:gap-6 text-xs sm:text-[8px] md:text-xs lg:text-sm xl:text-base font-normal sm:font-thin md:font-extralight font-secondary'>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/'>Beranda</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/about'>Tentang Sistem</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/predict'>Prediksi</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/model'>Model</a>
               </div>
           </div>
           <div className="flex flex-col gap-3">
               <h1 className='text-base font-main font-medium'>Kontak</h1>
-              <div className='flex flex-col gap-5 sm:gap-0 md:gap-2 lg:gap-4 xl:gap-6 text-xs sm:text-[8px] md:text-xs lg:text-sm xl:text-base font-normal sm:font-thin md:font-extralight lg:font-normal lg:hover:underline lg:hover:font-bold font-secondary'>
-                  <a href=''>088877554</a>
-                  <a href=''>myndcure@gmail.com</a>
-                  <a href=''>Linkedin</a>
-                  <a href=''>Instagram</a>
+              <div className='flex flex-col gap-5 sm:gap-0 md:gap-2 lg:gap-4 xl:gap-6 text-xs sm:text-[8px] md:text-xs lg:text-sm xl:text-base font-normal sm:font-thin md:font-extralight font-secondary'>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>088877554</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>myndcure@gmail.com</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>Linkedin</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>Instagram</a>
               </div>
           </div>
         </div>
