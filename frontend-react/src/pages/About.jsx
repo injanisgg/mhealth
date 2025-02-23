@@ -175,21 +175,21 @@ function About() {
   }
   
   return (
-    <div className='pb-0 sm:pb-16 md:pb-16 lg:pb-0 xl:pb-0'>
+    <div className='pb-14 sm:pb-16 md:pb-16 lg:pb-0 xl:pb-0'>
       <Banner title={'Tentang Sistem'} desc={'Sistem deteksi depresi ini dirancang untuk membantu mengidentifikasi tanda-tanda awal gangguan mental melalui analisis data dan kecerdasan buatan. Tujuannya bukan untuk menggantikan diagnosis profesional, tetapi sebagai alat bantu yang dapat meningkatkan kesadaran dan mendorong individu untuk mencari bantuan yang tepat lebih cepat.'}/>
 
       {/* section for page about */}
-      <div className="mx-5 my-8 sm:mx-4 md:mx-6 lg:mx-10 xl:mx-14 sm:my-7 md:my-9 lg:my-11 xl:my-13 lg:mt-16 xl:mt-20">
+      <div className="mx-3 my-8 sm:mx-4 md:mx-6 lg:mx-10 xl:mx-14 sm:my-7 md:my-9 lg:my-11 xl:my-13 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
-          <div className="flex items-center justify-center">
-            <img src={One} alt="Woman with girl" className='w-72 sm:w-56 md:w-64 lg:w-80 xl:w-96' />
-            <div className="flex flex-col gap-5 sm:gap-0 md:gap-1 lg:gap-3 mx-5 sm:mx-1 md:mx-5 lg:mx-10 xl:mx-16">
-              <h1 className='text-sm sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-bold font-main lg:hidden text-black'>Tentang Sistem</h1>
-              <div className="flex flex-col gap-5 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
-                <h1 className='flex flex-col font-main text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold z-0'>
+          <div className="flex items-center justify-center gap-2">
+            <img src={One} alt="Woman with girl" className='w-40 sm:w-56 md:w-64 lg:w-80 xl:w-96' />
+            <div className="flex flex-col gap-2 sm:gap-0 md:gap-1 lg:gap-3">
+              <h1 className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-bold font-main lg:hidden text-black'>Tentang Sistem</h1>
+              <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
+                <h1 className='flex flex-col font-main text-xs mm:text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold z-0'>
                   Temukan Depresi Lebih Cepat agar Penanganan Lebih Cepat
                 </h1>
-                <p className='font-secondary text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg text-justify'>
+                <p className='font-secondary text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg text-justify'>
                   Sistem ini membantu untuk melakukan prediksi terkait depresimu dengan cepat. Akurasi prediksi dari sistem ini mencapai 98.11% sehingga bisa cukup tepat untuk memprediksi.
                 </p>
               </div>
@@ -199,15 +199,15 @@ function About() {
       </div>
 
       {/* Data dan Tutorial */}
-      <div className="mx-5 my-8 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-20 sm:my-7 lg:mt-16 xl:mt-20">
+      <div className="mx-3 my-8 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-20 sm:my-7 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
-          <div className="flex flex-col gap-10 sm:gap-5 md:gap-7 lg:gap-9 xl:gap-11">
+          <div className="flex flex-col gap-3 sm:gap-5 md:gap-7 lg:gap-9 xl:gap-11">
             <div className="flex flex-col justify-center items-center">
-              <h3 className='text-sm sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Data dan Tutorial</h3>
-              <h1 className='font-main text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Data yang Dibutuhkan dan Cara Menggunakan</h1>
+              <h3 className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Data dan Tutorial</h3>
+              <h1 className='font-main text-xs mm:text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold'>Data yang Dibutuhkan dan Cara Menggunakan</h1>
             </div>
-            <div className="flex justify-center mx-0 md:mx-40 md:justify-start sm:justify-start gap-52 lg:gap-52 xl:gap-52 sm:gap-0 md:gap-0">
-              <div className="flex flex-col gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
+            <div className="flex justify-start md:justify-start sm:justify-start gap-3 lg:gap-52 xl:gap-52 sm:gap-3 md:gap-3">
+              <div className="flex flex-col gap-1 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
                 <AnimatePresence>
                   {playData.map((item) => (
                     <motion.div 
@@ -216,7 +216,7 @@ function About() {
                       layout // Menambahkan animasi layout agar elemen lain turun dengan smooth
                       transition={{ type: "spring", stiffness: 100, damping: 15 }} // Smooth animasi
                     >
-                      <div className="flex items-center gap-5 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
+                      <div className="flex items-center gap-2 sm:gap-2 md:gap-5 lg:gap-8 xl:gap-12">
                         <motion.div
                           animate={{ rotate: activeId === item.id ? 90 : 0 }}
                           transition={{ duration: 1 }}
@@ -224,17 +224,17 @@ function About() {
                           <FontAwesomeIcon
                             icon={faPlay}
                             onClick={() => handleClick(item.id)}
-                            className="text-3xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-black cursor-pointer"
+                            className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl text-black cursor-pointer"
                           />
                         </motion.div>
-                        <h2 className="font-main text-sm sm:text-xs md:text-sm lg:text-base xl:text-lg font-semibold">
+                        <h2 className="font-main font-bold text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg">
                           {item.title}
                         </h2>
                       </div>
                       <AnimatePresence>
                         {activeId === item.id && (
                           <motion.p
-                            className="text-sm text-justify sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-secondary text-gray-700 mr-20 sm:mr-14 w-[35rem]"
+                            className="text-justify text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-secondary text-gray-700 sm:mr-14 w-60 mm:w-72 ml:w-80 sm:w-[35rem]"
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
@@ -262,8 +262,8 @@ function About() {
           </div>
           </div>
           <div className='flex justify-center mt-5'>
-            <img src={Two} alt="Woman with girl" className='w-72 sm:w-32 md:w-44 lg:hidden xl:hidden' />
-            <img src={Three} alt="Woman with girl" className='w-72 sm:w-40 md:w-52 lg:hidden xl:hidden' />
+            <img src={Two} alt="Woman with girl" className='w-40 sm:w-32 md:w-44 lg:hidden xl:hidden' />
+            <img src={Three} alt="Woman with girl" className='w-36 sm:w-40 md:w-52 lg:hidden xl:hidden' />
           </div>
         </div>
       </div>

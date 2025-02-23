@@ -71,7 +71,7 @@ function ResponsiveBar() {
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={`lg:hidden fixed bottom-0 left-0 w-full bg-white shadow-md border-t flex justify-around py-4 font-main`}
+        className={`lg:hidden z-20 fixed bottom-0 left-0 w-full bg-white shadow-md border-t flex justify-around py-4 font-main`}
       >
         {tabs.map((tab) => (
           <Link
@@ -85,7 +85,7 @@ function ResponsiveBar() {
               icon={location.pathname === tab.path ? tab.solidIcon : tab.thinIcon}
               className='text-xs sm:text-xl transition-all duration-200 font-main'
             />
-            <span className='text-[8px] sm:text-xs text-thick-green'>{tab.label}</span>
+            <span className='text-xs sm:text-sm text-thick-green'>{tab.label}</span>
           </Link>
         ))}
       </motion.div>

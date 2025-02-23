@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import headerHome from '../img/header-home.png';
 import { faHeart, faHandshakeSimple, faRocket } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +24,7 @@ function Home() {
               </h1>
               <p className='font-secondary text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg w-38 mm:w-48 sm:w-52 md:w-72 lg:w-80 xl:w-96'>“Perawatan diri adalah bagaimana kamu mengambil kembali kekuatan kamu” - Lalah Delia.</p>
               <button className='w-20 mm:w-28 sm:w-32 md:w-44 lg:w-48 xl:w-52 py-1 sm:py-1 md:py-3 text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-main bg-button lg:cursor-pointer hover:bg-transparent hover:border-2 hover:border-button hover:text-button hover:font-bold transition-all ease-in-out rounded-full'>
-                <a href="/predict">Mulai Prediksi</a>
+                <Link to='/predict'>Mulai Prediksi</Link>
               </button>
             </div>
             <img src={headerHome} alt="Woman with girl" className='w-40 sm:w-60 md:w-80 lg:w-96 xl:w-[30rem] z-10 mb-10 sm:mb-10' />
@@ -65,7 +66,7 @@ function Home() {
         <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <img src={aboutHome} alt="Woman with girl" className='w-40 mm:w-44 sm:w-56 md:w-64 lg:w-72 xl:w-96' />
           <div className="flex flex-col gap-0 sm:gap-0 md:gap-1 lg:gap-3 xl:gap-4">
-            <h1 className='text-[8px] mm:text-xs sm:text-[8px] md:text-xs lg:text-base xl:text-lg font-bold font-main text-black'>Tentang Sistem</h1>
+            <h1 className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Tentang Sistem</h1>
             <div className="flex flex-col gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
               <h1 className='flex flex-col font-main text-xs mm:text-sm sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-bold z-0'>
                 Ketahuilah lebih dalam tentang sistem prediksi depresi ini
@@ -74,7 +75,7 @@ function Home() {
                 Ketahui informasi mengenai sistem ini. Dari mulai tujuan pembuatan sistem sampai dengan data yang dibutuhkan untuk melakukan prediksi serta cara menggunakannya.              
               </p>
               <button className='w-20 mm:w-24 sm:w-32 md:w-44 lg:w-48 xl:w-52 py-1 sm:py-1 md:py-3 text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-main bg-button lg:cursor-pointer hover:bg-transparent hover:border-2 hover:border-button hover:text-button hover:font-bold transition-all ease-in-out rounded-full'>
-                <a href="/about">Tentang Sistem</a>
+                <Link to='/about'>Tentang Sistem</Link>
               </button>
             </div>
           </div>
@@ -91,24 +92,24 @@ function Home() {
           </h1>
           <div className="flex gap-5 sm:gap-10 md:gap-14 lg:gap-20 justify-center">
             <div className="flex flex-col text-center gap-0 sm:gap-0 md:gap-2 lg:gap-4 items-center font-main">
-              <p className='text-[8px] mm:text-xs sm:text-[8px] md:text-sm lg:text-base xl:text-lg'>Akurasi</p>
+              <p className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg'>Akurasi</p>
               <h3 className='text-xs mm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold'>98.11%</h3>
             </div>
             <div className="flex flex-col text-center gap-0 sm:gap-0 md:gap-2 lg:gap-4 items-center font-main">
-              <p className='text-[8px] mm:text-xs sm:text-[8px] md:text-sm lg:text-base xl:text-lg'>Dilatih dengan data</p>
+              <p className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg'>Dilatih dengan data</p>
               <h3 className='text-xs mm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold'>27.000</h3>
             </div>
             <div className="flex flex-col text-center gap-0 sm:gap-0 md:gap-2 lg:gap-4 items-center font-main">
-              <p className='text-[8px] mm:text-xs sm:text-[8px] md:text-sm lg:text-base xl:text-lg'>Presisi</p>
+              <p className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg'>Presisi</p>
               <h3 className='text-xs mm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold'>97.74%</h3>
             </div>
             <div className="flex flex-col text-center gap-0 sm:gap-0 md:gap-2 lg:gap-4 items-center font-main">
-              <p className='text-[8px] mm:text-xs sm:text-[8px] md:text-sm lg:text-base xl:text-lg'>Recall</p>
+              <p className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg'>Recall</p>
               <h3 className='text-xs mm:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold'>98.38%</h3>
             </div>
           </div>
           <button className='w-20 mm:w-24 sm:w-32 md:w-44 lg:w-48 xl:w-52 py-1 sm:py-1 md:py-3 text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-main bg-button lg:cursor-pointer hover:bg-transparent hover:border-2 hover:border-button hover:text-button hover:font-bold transition-all ease-in-out rounded-full'>
-            <a href="/predict">Mulai Prediksi</a>
+            <Link to='/precit'>Mulai Prediksi</Link>
           </button>
         </div>
       </div>
@@ -124,7 +125,7 @@ function Home() {
             </h1>
             <p className='font-secondary text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg'>Jelajahi bagaimana model bekerja dan temukan insight dari hasil prediksinya.</p>
             <button className='w-20 mm:w-24 sm:w-32 md:w-44 lg:w-48 xl:w-52 py-1 sm:py-1 md:py-3 text-[8px]  mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-main bg-button lg:cursor-pointer hover:bg-transparent hover:border-2 hover:border-button hover:text-button hover:font-bold transition-all ease-in-out rounded-full'>
-              <a href="/model">Detail Model</a>
+              <Link to='/model'>Detail Model</Link>
             </button>
           </div>
         </div>

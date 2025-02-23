@@ -15,19 +15,19 @@ function Footer() {
           <div className="flex flex-col gap-1 sm:gap-3">
               <h1 className='text-xs mm:text-sm sm:text-base font-main font-medium'>Halaman</h1>
               <div className='flex flex-col gap-1 sm:gap-1 md:gap-2 lg:gap-4 xl:gap-6 text-[8px] mm:text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base font-normal font-secondary'>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/'>Beranda</a>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/about'>Tentang Sistem</a>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/predict'>Prediksi</a>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href='/model'>Model</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/'>Beranda</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/about'>Tentang Sistem</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/predict'>Prediksi</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/model'>Model</a>
               </div>
           </div>
           <div className="flex flex-col gap-1 sm:gap-3">
               <h1 className='text-xs mm:text-sm sm:text-base font-main font-medium'>Kontak</h1>
               <div className='flex flex-col gap-1 sm:gap-1 md:gap-2 lg:gap-4 xl:gap-6 text-[8px] mm:text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base font-normal font-secondary'>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>088877554</a>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>myndcure@gmail.com</a>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>Linkedin</a>
-                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold' href=''>Instagram</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href=''>088877554</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href=''>myndcure@gmail.com</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href=''>Linkedin</a>
+                  <a className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href=''>Instagram</a>
               </div>
           </div>
         </div>
