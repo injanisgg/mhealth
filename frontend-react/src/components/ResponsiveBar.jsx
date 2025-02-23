@@ -83,9 +83,9 @@ function ResponsiveBar() {
           >
             <FontAwesomeIcon
               icon={location.pathname === tab.path ? tab.solidIcon : tab.thinIcon}
-              className='text-xl transition-all duration-200 font-main'
+              className='text-xs sm:text-xl transition-all duration-200 font-main'
             />
-            <span className='text-xs text-thick-green'>{tab.label}</span>
+            <span className='text-[8px] sm:text-xs text-thick-green'>{tab.label}</span>
           </Link>
         ))}
       </motion.div>
