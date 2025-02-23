@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-full mt-10 sm:mt-12 mb-14 sm:mb-0 bg-gradient-to-r from-light-green to-thick-green p-4 sm:p-2 md:p-5 lg:p-10 xl:p-16'>
+    <div className='w-full mt-10 sm:mt-12 bg-gradient-to-r from-light-green to-thick-green p-4 sm:p-2 md:p-5 lg:p-10 xl:p-16'>
       <div className="flex flex-col items-center gap-5">
         <div className="flex gap-2 sm:gap-8 md:gap-12 lg:gap-32 xl:gap-48 text-white">
           <div className="flex flex-col gap-1 sm:gap-3">

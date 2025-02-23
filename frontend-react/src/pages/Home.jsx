@@ -8,10 +8,10 @@ import predictHome from '../img/predict-home.png';
 
 function Home() {
   return (
-  <div className='pb-0 sm:pb-16 md:pb-16 lg:pb-0 xl:pb-0'>
+  <div className='pb-14 sm:pb-16 md:pb-16 lg:pb-0 xl:pb-0'>
       {/* main banner */}
-      <div className="mx-1 sm:mx-1 md:mx-5 lg:mx-10 xl:mx-14">
-        <div className='w-full bg-transparent px-2 py-8 sm:px-4 sm:py-7 lg:mt-16 xl:mt-16'>
+      <div className="mx-3 sm:mx-1 md:mx-5 lg:mx-10 xl:mx-14">
+        <div className='w-full bg-transparent py-8 sm:px-4 sm:py-7 lg:mt-16 xl:mt-16'>
           <div className="flex items-center justify-around">
             <div className="flex flex-col gap-1 sm:gap-2 md:gap-5 lg:gap-10 xl:gap-16">
               <h1 className='text-[8px] sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-main font-bold lg:hidden text-black'>Mental Health Detection</h1>
@@ -32,23 +32,23 @@ function Home() {
       </div>
 
     {/* section info the importance */}
-    <div className="mx-1 sm:mx-5 md:mx-10 lg:mx-16 xl:mx-20">
+    <div className="mx-3 sm:mx-5 md:mx-10 lg:mx-16 xl:mx-20">
       <div className="flex flex-col justify-center items-center gap-2 sm:gap-5 relative">
         <div className='flex justify-center text-center font-bold font-main text-xs sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>
           <h1>Mengapa Kesehatan Mental itu Penting dan <br /> Berpengaruh pada Kualitas Hidup?</h1>
         </div>
-        <div className="relative flex">
-          <div className='flex flex-col gap-1 sm:gap-2 items-center p-1 sm:p-2 md:p-4 lg:p-6 xl:p-8 border-black border-y border-l rounded-l-3xl'>
+        <div className="flex static">
+          <div className='absolute left-0 bottom-2 top-12 flex flex-col gap-1 sm:gap-2 items-center py-1 pl-2 pr-16 sm:p-2 md:p-4 lg:p-6 xl:p-8 border-black border-y border-l rounded-l-3xl'>
             <FontAwesomeIcon icon={faHeart} className='text-sm sm:text-3xl m:text-5xl lg:text-6xl xl:text-7xl text-red-500'/>
-            <h3 className='font-main font-semibold text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Menjaga Kesehatan Fisik</h3>
+            <h3 className='w-20 font-main left-0 font-semibold text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Menjaga Kesehatan Fisik</h3>
             <p className='w-20 sm:w-32 md:w-48 lg:w-52 xl:w-60 text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Kesehatan mental yang baik dapat mengurangi risiko penyakit fisik. Stres yang dikelola dengan baik membuat tubuh lebih sehat.</p>
           </div>
-          <div className='relative z-10 shadow-xl flex flex-col gap-1 sm:gap-2 items-center rounded-3xl p-1 sm:p-3 md:p-6 lg:p-8 bg-gradient-to-r from-light-green to-thick-green text-white'>
+          <div className='relative z-10 h-36 shadow-xl flex flex-col gap-1 sm:gap-2 items-center rounded-3xl px-2 py-4 sm:p-3 md:p-6 lg:p-8 bg-gradient-to-r from-light-green to-thick-green text-white'>
             <FontAwesomeIcon icon={faHandshakeSimple} className='text-sm sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-yellow-500'/>
             <h3 className='font-main font-semibold text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Menjaga Hubungan Sosial</h3>
             <p className='w-20 sm:w-36 md:w-48 lg:w-52 xl:w-60 text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Orang dengan mental yang sehat lebih mampu membangun dan mempertahankan hubungan yang positif.</p>
           </div>
-          <div className='relative flex flex-col gap-1 sm:gap-2 items-center p-1 sm:p-2 md:p-4 border-black border-y border-r rounded-r-3xl'>
+          <div className='absolute right-0 bottom-2 top-12 flex flex-col gap-1 sm:gap-2 items-center py-1 pr-2 pl-16 sm:p-2 md:p-4 border-black border-y border-r rounded-r-3xl'>
             <FontAwesomeIcon icon={faRocket} className='text-sm sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-gray-500'/>
             <h3 className='font-main font-semibold text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Meningkatkan Produktivitas</h3>
             <p className='w-20 sm:w-32 md:w-48 lg:w-52 xl:w-60 text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Kesehatan mental yang baik membantu seseorang lebih fokus, kreatif, dan produktif dalam bekerja atau belajar.</p>
@@ -58,7 +58,7 @@ function Home() {
     </div>
 
     {/* section for page about */}
-    <div className="mx-1 my-4 sm:mx-4 sm:my-7 md:mx-8 md:my-9 lg:mx-20 lg:my-11 lg:mt-16 xl:mx-24 xl:my-13 xl:mt-16">
+    <div className="mx-3 my-4 sm:mx-4 sm:my-7 md:mx-8 md:my-9 lg:mx-20 lg:my-11 lg:mt-16 xl:mx-24 xl:my-13 xl:mt-16">
       <div className='w-full bg-transparent'>
         <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <img src={aboutHome} alt="Woman with girl" className='w-40 sm:w-56 md:w-64 lg:w-72 xl:w-96' />
@@ -112,7 +112,7 @@ function Home() {
       </div>
 
     {/* section info page model */}
-    <div className='mx-1 my-8 sm:mx-4 md:mx-8 lg:mx-20 sm:my-7 md:my-9 lg:my-11 lg:mt-16 xl:mx-28 xl:my-13 xl:mt-16'>
+    <div className='mx-3 my-8 sm:mx-4 md:mx-8 lg:mx-20 sm:my-7 md:my-9 lg:my-11 lg:mt-16 xl:mx-28 xl:my-13 xl:mt-16'>
       <div className="flex items-center justify-center">
         <div className="flex flex-col gap-1 sm:gap-1 md:gap-4 lg:gap-6 xl:gap-8">
           <h1 className='text-[8px] sm:text-[8px] md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Model</h1>
