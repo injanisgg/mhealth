@@ -10,7 +10,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        // 'xs': '375px',  //mobile first
+        // 'ms': '320px', //mobile s ==> base
+        'mm': '375px',  //mobile m
+        'ml': '425px', //mobile L
         'sm': '480px',   // hp 
         'md': '768px',   // tablet
         'lg': '1024px',  // laptop
