@@ -111,7 +111,7 @@ function DepressionForm() {
       <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-col justify-center items-center">
         <p className="text-black text-center font-main font-bold text-xs sm:text-xs md:text-sm lg:text-sm xl:text-lg">Prediksi</p>
         <h1 className="text-sm mm:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
-        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max sm:w-max md:w-max lg:w-fit gap-4 items-end lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-5">
+        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max h-full sm:w-max md:w-max lg:w-fit gap-4 items-end lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-5">
           <InputField label="Umur" name="Age" type="number" />
           <InputField label="IPK" name="Cgpa" type="number" />
           <InputField label="Tekanan Akademik (1-5)" name="Academic_Pressure" type="number" />

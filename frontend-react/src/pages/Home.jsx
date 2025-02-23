@@ -45,7 +45,7 @@ function Home() {
             <h3 className='w-20 mm:w-24 sm:w-36 lg:w-48 xl:w-60 font-main font-semibold text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Menjaga Kesehatan Fisik</h3>
             <p className='w-20 sm:w-32 md:w-48 lg:w-52 xl:w-60 text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Kesehatan mental yang baik dapat mengurangi risiko penyakit fisik. Stres yang dikelola dengan baik membuat tubuh lebih sehat.</p>
           </div>
-          <div className='relative z-10 h-40 mm:h-[17rem] lg:h-80 xl:h-96 shadow-xl flex flex-col gap-1 sm:gap-2 items-center rounded-3xl px-2 py-4 mm:py-6 sm:p-3 md:p-6 lg:p-8 bg-gradient-to-r from-light-green to-thick-green text-white'>
+          <div className='relative z-10 h-44 mm:h-[18rem] lg:h-80 xl:h-96 shadow-xl flex flex-col gap-1 sm:gap-2 items-center rounded-3xl px-2 py-4 mm:py-6 sm:p-3 md:p-6 lg:p-8 bg-gradient-to-r from-light-green to-thick-green text-white'>
             <FontAwesomeIcon icon={faHandshakeSimple} className='text-sm mm:text-xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-yellow-500'/>
             <h3 className='mm:w-32 lg:w-48 font-main font-semibold text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Menjaga Hubungan Sosial</h3>
             <p className='w-20 sm:w-36 md:w-48 lg:w-52 xl:w-60 text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-center'>Orang dengan mental yang sehat lebih mampu membangun dan mempertahankan hubungan yang positif.</p>
