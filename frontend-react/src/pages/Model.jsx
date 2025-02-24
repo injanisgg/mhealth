@@ -18,7 +18,7 @@ function Model() {
       <Banner title={'Model'} desc={'Halaman ini memberikan informasi mengenai model dari sistem ini. Mulai dari algoritma dan metode yang digunakan sampai dengan apa saja tools yang dipakai dalam pembuatan sistem ini.'}/>
       
       {/* card methods */}
-      <div className="mx-3 sm:mx-10 md:mx-14 lg:mx-20 mt-5 sm:mt-8 md:mt-10 lg:mt-12">
+      <div className="mx-3 my-10 sm:mx-10 md:mx-14 lg:mx-20 mt-5 sm:mt-8 md:mt-10 lg:mt-12">
         <div className="flex flex-col justify-center items-center gap-3 sm:gap-3 md:gap-5 lg:gap-7 xl:gap-9">
           <div className="w-full border border-black rounded-2xl p-2 sm:p-2 md:p-5 lg:p-7 xl:p-9 items-center justify-center gap-2 sm:gap-2 md:gap-5 lg:gap-7 xl:gap-9">
             <div className="flex flex-col">
@@ -54,7 +54,7 @@ function Model() {
           </div>
 
           {/* desc */}
-          <div className="w-full">
+          <div className="w-full my-10">
             <div className="flex flex-col items-center">
               <h4 className='text-[8px] mm:text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Model dan Metode</h4>
               <h1 className='font-main text-xs mm:text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-center mb-5 sm:mb-3 md:mb-5 lg:mb-7 xl:mb-9'>Model Algoritma dan Metode yang Digunakan pada Sistem Deteksi Depresi</h1>
@@ -70,7 +70,7 @@ function Model() {
           </div>
 
           {/* card tools */}
-          <div className="flex flex-col items-center w-full">
+          <div className="my-10 flex flex-col items-center w-full">
             <div className="flex justify-center">
               <div className="flex flex-col gap-1 sm:gap-1 md:gap-3 lg:gap-5 xl:gap-7 p-2 sm:p-2 md:p-5 lg:py-7 lg:px-16 xl:py-9 xl:px-20 justify-around text-center items-center text-white bg-gradient-to-r from-light-green to-thick-green rounded-3xl">
                 <img src={Flask} alt="logo" className='w-10 mm:w-14 sm:w-16 md:w-16 lg:w-20 xl:w-24'/>

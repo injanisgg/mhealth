@@ -179,7 +179,7 @@ function About() {
       <Banner title={'Tentang Sistem'} desc={'Sistem deteksi depresi ini dirancang untuk membantu mengidentifikasi tanda-tanda awal gangguan mental melalui analisis data dan kecerdasan buatan. Tujuannya bukan untuk menggantikan diagnosis profesional, tetapi sebagai alat bantu yang dapat meningkatkan kesadaran dan mendorong individu untuk mencari bantuan yang tepat lebih cepat.'}/>
 
       {/* section for page about */}
-      <div className="mx-3 my-8 sm:mx-4 md:mx-6 lg:mx-10 xl:mx-14 sm:my-7 md:my-9 lg:my-11 xl:my-13 lg:mt-16 xl:mt-20">
+      <div className="mx-3 my-10 sm:mx-4 md:mx-6 lg:mx-10 xl:mx-14 lg:my-11 xl:my-13 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
           <div className="flex items-center justify-center gap-2">
             <img src={One} alt="Woman with girl" className='w-40 sm:w-56 md:w-64 lg:w-80 xl:w-96' />
@@ -199,7 +199,7 @@ function About() {
       </div>
 
       {/* Data dan Tutorial */}
-      <div className="mx-3 my-8 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-20 sm:my-7 lg:mt-16 xl:mt-20">
+      <div className="mx-3 my-10 sm:mx-4 md:mx-6 lg:mx-12 xl:mx-20 lg:mt-16 xl:mt-20">
         <div className='w-full bg-transparent'>
           <div className="flex flex-col gap-3 sm:gap-5 md:gap-7 lg:gap-9 xl:gap-11">
             <div className="flex flex-col justify-center items-center">

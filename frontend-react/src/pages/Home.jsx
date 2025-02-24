@@ -33,7 +33,7 @@ function Home() {
       </div>
 
     {/* section info the importance */}
-    <div className="mx-3 sm:mx-5 md:mx-10 lg:mx-16 xl:mx-20">
+    <div className="mx-3 my-10 sm:mx-5 md:mx-10 lg:mx-16 xl:mx-20">
       <div className="flex flex-col justify-center items-center gap-4 sm:gap-5 relative">
         <div className='flex justify-center text-center font-bold font-main text-xs mm:text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl'>
           <h1>Mengapa Kesehatan Mental itu Penting dan <br /> Berpengaruh pada Kualitas Hidup?</h1>
@@ -61,7 +61,7 @@ function Home() {
     </div>
 
     {/* section for page about */}
-    <div className="mx-3 my-4 sm:mx-4 sm:my-7 md:mx-8 md:my-9 lg:mx-20 lg:my-11 lg:mt-16 xl:mx-24 xl:my-13 xl:mt-16">
+    <div className="mx-3 my-10 sm:mx-4 sm:my-7 md:mx-8 md:my-9 lg:mx-20 lg:my-11 lg:mt-16 xl:mx-24 xl:my-13 xl:mt-16">
       <div className='w-full bg-transparent'>
         <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
           <img src={aboutHome} alt="Woman with girl" className='w-40 mm:w-44 sm:w-56 md:w-64 lg:w-72 xl:w-96' />
@@ -84,7 +84,7 @@ function Home() {
     </div>
 
     {/* section for page predict */}
-      <div className="text-white bg-gradient-to-r from-light-green to-thick-green w-full p-5 sm:p-8 md:p-10 lg:p-12">
+      <div className="my-10 text-white bg-gradient-to-r from-light-green to-thick-green w-full p-5 sm:p-8 md:p-10 lg:p-12">
         <div className="flex flex-col gap-1 sm:gap-1 md:gap-4 lg:gap-6 xl:gap-8 justify-center items-center">
           <p className='text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold font-main'>Tentang Sistem</p>
           <h1 className='font-main text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-center mb-2 sm:mb-2 md:mb-4 lg:mb-6'>
@@ -109,13 +109,13 @@ function Home() {
             </div>
           </div>
           <button className='w-20 mm:w-24 sm:w-32 md:w-44 lg:w-48 xl:w-52 py-1 sm:py-1 md:py-3 text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg text-white font-main bg-button lg:cursor-pointer hover:bg-transparent hover:border-2 hover:border-button hover:text-button hover:font-bold transition-all ease-in-out rounded-full'>
-            <Link to='/precit'>Mulai Prediksi</Link>
+            <Link to='/predict'>Mulai Prediksi</Link>
           </button>
         </div>
       </div>
 
     {/* section info page model */}
-    <div className='mx-3 my-8 sm:mx-4 md:mx-8 lg:mx-20 sm:my-7 md:my-9 lg:my-11 lg:mt-16 xl:mx-28 xl:my-13 xl:mt-16'>
+    <div className='mx-3 my-10 sm:mx-4 md:mx-8 lg:mx-20 sm:my-7 md:my-9 lg:my-11 lg:mt-16 xl:mx-28 xl:my-13 xl:mt-16'>
       <div className="flex items-center justify-center">
         <div className="flex flex-col gap-1 sm:gap-1 md:gap-4 lg:gap-6 xl:gap-8">
           <h1 className='text-[8px] mm:text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg font-bold font-main text-black'>Model</h1>
@@ -134,7 +134,7 @@ function Home() {
     </div>
 
     {/* quotes */}
-    <div className="bg-gradient-to-r from-thick-green to-light-green w-full p-4  sm:p-8 md:p-10 lg:px-14 lg:py-24 xl:px-20 xl:py-28 text-sm mm:text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white font-bold text-center">
+    <div className="my-10 bg-gradient-to-r from-thick-green to-light-green w-full p-4  sm:p-8 md:p-10 lg:px-14 lg:py-24 xl:px-20 xl:py-28 text-sm mm:text-base sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white font-bold text-center">
     “Perasaan ini akan berlalu. Ketakutan itu nyata, tetapi bahayanya tidak.
       Anda memiliki hak untuk merawat diri sendiri.”
     </div>

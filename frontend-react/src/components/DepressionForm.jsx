@@ -82,7 +82,7 @@ function DepressionForm() {
       <label className="block text-xs mm:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium text-black ml-5 mb-1 lg:mb-0">{label}</label>
       {type === "select" ? (
         <select
-          className="w-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
+          className="w-full h-full text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl py-3 px-4 border border-black rounded-xl bg-white shadow-sm focus:ring-2 focus:ring-blue-500"
           name={name}
           value={formData[name]}
           onChange={handleChange}
@@ -96,7 +96,7 @@ function DepressionForm() {
       ) : (
         <input
           type={type}
-          className="w-full py-3 px-4 border border-black rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 text-black"
+          className="w-full h-full py-3 px-4 border border-black rounded-xl shadow-sm focus:ring-2 focus:ring-blue-500 text-black"
           name={name}
           value={formData[name]}
           onChange={handleChange}
@@ -107,11 +107,11 @@ function DepressionForm() {
   );
 
   return (
-    <div className="mx-3 sm:mx-10 md:mx-14 lg:mx-20 xl:mx-20 mt-5 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14">
+    <div className="mx-3 my-10 sm:mx-10 md:mx-14 lg:mx-20 xl:mx-20 mt-5 sm:mt-8 md:mt-10 lg:mt-12 xl:mt-14">
       <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-col justify-center items-center">
         <p className="text-black text-center font-main font-bold text-xs sm:text-xs md:text-sm lg:text-sm xl:text-lg">Prediksi</p>
         <h1 className="text-sm mm:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-6 text-center text-black font-main">Prediksi Resiko Depresi</h1>
-        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max h-full sm:w-max md:w-max lg:w-fit gap-4 items-end lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-5">
+        <form onSubmit={handleSubmit} className="space-y-4 font-main w-max sm:w-max md:w-max lg:w-fit gap-4 items-end lg:grid lg:grid-flow-row-dense lg:grid-cols-3 lg:grid-rows-5">
           <InputField label="Umur" name="Age" type="number" />
           <InputField label="IPK" name="Cgpa" type="number" />
           <InputField label="Tekanan Akademik (1-5)" name="Academic_Pressure" type="number" />
