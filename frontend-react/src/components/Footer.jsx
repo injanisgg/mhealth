@@ -16,19 +16,19 @@ function Footer() {
           <div className="flex flex-col gap-1 sm:gap-3">
               <h1 className='text-xs mm:text-sm sm:text-base font-main font-medium'>Halaman</h1>
               <div className='flex flex-col gap-1 sm:gap-1 md:gap-2 lg:gap-4 xl:gap-6 text-[8px] mm:text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base font-normal font-secondary'>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/'>Beranda</Link>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/about'>Tentang Sistem</Link>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/predict'>Prediksi</Link>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/model'>Model</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/'>Beranda</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/about'>Tentang Sistem</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/predict'>Prediksi</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/model'>Model</Link>
               </div>
           </div>
           <div className="flex flex-col gap-1 sm:gap-3">
               <h1 className='text-xs mm:text-sm sm:text-base font-main font-medium'>Kontak</h1>
               <div className='flex flex-col gap-1 sm:gap-1 md:gap-2 lg:gap-4 xl:gap-6 text-[8px] mm:text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base font-normal font-secondary'>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/'>088877554</Link>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/'>myndcure@gmail.com</Link>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/'>Linkedin</Link>
-                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' href='/'>Instagram</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/'>088877554</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/'>myndcure@gmail.com</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/'>Linkedin</Link>
+                  <Link className='lg:font-normal lg:hover:underline lg:hover:font-bold transition-all ease-in-out' to='/'>Instagram</Link>
               </div>
           </div>
         </div>
