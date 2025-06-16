@@ -37,10 +37,6 @@ function Model() {
                 </div>
               </div>
               <div className="flex items-center justify-around">
-                <div className="flex flex-col items-center mr-0 sm:mr-2">
-                  <img src={SMOTE} alt="logo SMOTE" className='w-16 mm:w-20 sm:w-28 md:w-40 lg:w-52 xl:w-60'/>
-                  <p className='text-center text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-main font-bold'>SMOTEENN</p>
-                </div>
                 <div className="flex flex-col items-center">
                   <img src={Lgbm} alt="logo Lgbm" className='w-16 mm:w-20 sm:w-28 md:w-40 lg:w-52 xl:w-60'/>
                   <p className='text-center text-xs sm:text-sm md:text-sm lg:text-base xl:text-lg font-main font-bold'>LGBM Classifier</p>
@@ -63,8 +59,7 @@ function Model() {
                 Dataset kemudian masuk ke proses <span className='font-bold'>preprocessing</span> dan <span className='font-bold'>data cleaning</span>.
                 Setelah itu masuk ke tahap <span className='font-bold'>Exploratory Data Analysis (EDA)</span> dan dilanjutkan dengan proses <span className='font-bold'>Scaling</span> dengan <span className='font-bold'>StandardScaler</span>. 
                 Dataset kemudian masuk ke tahap <span className='font-bold'>seleksi fitur</span> menggunakan <span className='font-bold'>Recursive Feature Selection (RFE)</span> yang memilih 11 dari 18 fitur. 
-                Data kemudian discaling kembali dan masuk ke proses <span className='font-bold'>Splitting Data</span> dengan proporsi 80% untuk training dan 20% untuk testing. Data training masuk ke tahap <span className='font-bold'>Oversampling</span> menggunakan <span className='font-bold'>SMOTEENN</span>. 
-                Dilanjutkan dengan <span className='font-bold'>Optimasi Hyperparameter</span> menggunakan <span className='font-bold'>Optuna</span>. Dan tahap terakhir adalah <span className='font-bold'>Evaluasi Model</span> menggunakan <span className='font-bold'>Light Gradient Boosting Machine (LGBM)</span> dan parameter terbaik dari Optuna. 
+                Data kemudian discaling kembali dan masuk ke proses <span className='font-bold'>Splitting Data</span> dengan proporsi 80% untuk training dan 20% untuk testing. Dilanjutkan dengan <span className='font-bold'>Optimasi Hyperparameter</span> menggunakan <span className='font-bold'>Optuna</span>. Dan tahap terakhir adalah <span className='font-bold'>Evaluasi Model</span> menggunakan <span className='font-bold'>Light Gradient Boosting Machine (LGBM)</span> dan parameter terbaik dari Optuna. 
               </p>
             </div>
           </div>

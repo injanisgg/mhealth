@@ -45,7 +45,7 @@ CORS(app)
 logging.basicConfig(level=logging.INFO)
 
 # Path model dan encoder
-MODEL_PATH = "models/lgbm_mhealth3.pkl"
+MODEL_PATH = "models/lgbm_mhealth4.pkl"
 SCALER_PATH = "models/scaler_after_rfe.pkl"
 ENCODER_PATH = "models/label_encoders.pkl"
 
